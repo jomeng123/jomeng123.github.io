@@ -1,0 +1,149 @@
+/* ---------- Base Styles ---------- */
+:root {
+  --primary-color: #111;
+  --secondary-color: #555;
+  --accent-color: #DEAF84;
+  --bg-color: #ffffff;
+  --card-bg: #fafafa;
+  --transition-speed: 0.25s;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    background-color: #f9f9f9;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+/* =======================
+   Home Button
+======================= */
+.home-button {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  padding: 0.5rem 1rem;
+  background-color: #97704F;
+  color: #fff;
+  text-decoration: none;
+  accent-color: #DEAF84;
+  border-radius: 6px;
+  font-weight: 200;
+  transition: background-color 0.2s ease;
+  z-index: 10;              /* ensure it sits above the map */
+}
+
+.home-button:hover {
+  background-color: #7b5638; /* darker on hover */
+}
+
+/* ---------- Tooltip ---------- */
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 14px;
+    display: none;
+}
+
+/* ---------- Map States ---------- */
+.state {
+    fill: #e0e0e0;
+    stroke: #999;
+}
+
+/* ---------- Destination Dots ---------- */
+.dot {
+    fill: #FFD65C;
+    stroke: #ff8c00;
+    stroke-width: 2px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 4px #FFE28A);
+    r: 6xpx;
+
+}
+
+/* ---------- Origin Dot ---------- */
+.origin {
+    fill: blue;
+    stroke: black;
+    stroke-width: 1px;
+    filter: drop-shadow(0 0 6px #FFD65C);
+}
+
+/* ---------- Arcs ---------- */
+.arc {
+    stroke: rgba(255,140,0,0.6);
+    stroke-width: 2.5px;
+    fill: none;
+    filter: drop-shadow(0 0 4px #FFE28A);
+}
+
+/* ---------- Top 5 Panel ---------- */
+#top-panel {
+    position: absolute;
+    top: 160px;
+    right: 30px;
+    background: rgba(255,255,255,0.9);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+    font-family: system-ui, sans-serif;
+    width: 240px;
+    font-size: 0.9rem;
+}
+
+#top-panel .title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#top-panel .row {
+    margin-bottom: 8px;
+}
+
+#top-panel .row strong {
+    font-size: 16px;
+}
+
+#top-panel .row span {
+    color: #555;
+    font-size: 14px;
+}
+
+#top-panel .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+}
+
+#top-panel .bar-bg {
+    flex: 1;
+    height: 5px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+#top-panel .bar-fill {
+    height: 100%;
+    background: #fb923c;
+    border-radius: 5px;
+}
+
+#top-panel .bar-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
