@@ -67,7 +67,7 @@ d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json").then(us => {
     // =======================
     // Load residency data
     // =======================
-    d3.csv("residency_clean.csv").then(data => {
+    d3.csv("/residency_clean.csv").then(data => {
 
         data.forEach(d => {
             d.lat = +d.lat;
