@@ -22,9 +22,8 @@ html, body {
     height: 100vh;
 }
 
-/* =======================
-   Home Button
-======================= */
+
+/* ---------- Home Button ---------- */
 .home-button {
   position: absolute;
   top: 40px;
@@ -62,6 +61,7 @@ html, body {
     stroke: #999;
 }
 
+
 /* ---------- Destination Dots ---------- */
 .dot {
     fill: #FFD65C;
@@ -89,28 +89,52 @@ html, body {
     filter: drop-shadow(0 0 4px #FFE28A);
 }
 
+/* ---------- Year Slider ---------- */
+
+#year-slider {
+    position: fixed;
+    top: 20px;                  /* distance from top */
+    left: 50%;                  /* horizontal center */
+    transform: translateX(-50%);/* center element exactly */
+    background: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-family: sans-serif;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#yearRange {
+    margin-left: 10px;
+}
+
 /* ---------- Top 5 Panel ---------- */
 #top-panel {
-    position: absolute;
-    top: 160px;
-    right: 30px;
-    background: rgba(255,255,255,0.9);
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
-    font-family: system-ui, sans-serif;
-    width: 240px;
-    font-size: 0.9rem;
+    position: fixed;
+    right: 20px;
+    top: 80px;
+    width: 220px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    font-size: 11px;
+    z-index: 1000;
+    cursor: grab;
 }
 
 #top-panel .title {
     font-size: 18px;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 #top-panel .row {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 #top-panel .row strong {
@@ -125,25 +149,25 @@ html, body {
 #top-panel .bar-row {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 3px;
+    gap: 8px;
+    margin-top: 4px;
 }
 
 #top-panel .bar-bg {
     flex: 1;
-    height: 5px;
+    height: 6px;
     background: #eee;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #top-panel .bar-fill {
     height: 100%;
     background: #fb923c;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 #top-panel .bar-count {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color: #444;
 }
